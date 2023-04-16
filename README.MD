@@ -8,7 +8,7 @@
 |  Deve ser possível filtrar pets por suas características |  | Pendente |
 |  Deve ser possível visualizar detalhes de um pet para adoção |  | Pendente |
 |  Deve ser possível se cadastrar como uma ORG |  | Pendente |
-|  Deve ser possível realizar login como uma ORG |  | Pendente |
+|  Deve ser possível realizar login como uma ORG | Contendo os seguintes campos: Nome do responsável, e-mail, CEP, Endereço, Número de whatsapp, Senha  | Pendente |
 
 ### Regras de negócio
 
