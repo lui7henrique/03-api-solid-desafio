@@ -6,6 +6,7 @@ import { InMemoryPetsRepository } from '@/repositories/in-memory/in-memory-pets-
 import { InMemoryOrgsRepository } from '@/repositories/in-memory/in-memory-orgs-repository'
 import { mockCreatePetBody } from '@/mock/pets/create'
 import { Org } from '@prisma/client'
+import { ResourceNotFoundError } from '../errors/resource-not-found-error'
 
 let petsRepository: InMemoryPetsRepository
 let orgsRepository: InMemoryOrgsRepository
@@ -13,7 +14,7 @@ let orgsRepository: InMemoryOrgsRepository
 let sut: RegisterPetUseCase
 let org: Org
 
-describe('Register org use-case', () => {
+describe('Register pet use-case', () => {
   beforeEach(async () => {
     petsRepository = new InMemoryPetsRepository()
     orgsRepository = new InMemoryOrgsRepository()
@@ -36,5 +37,16 @@ describe('Register org use-case', () => {
 
     expect(pet.id).toEqual(expect.any(String))
     expect(pet.orgId).toEqual(org.id)
+  })
+
+  it('should to register', async () => {
+    const data = mockCreatePetBody()
+
+    await expect(() =>
+      sut.execute({
+        ...data,
+        orgId: 'invalid',
+      }),
+    ).rejects.toBeInstanceOf(ResourceNotFoundError)
   })
 })

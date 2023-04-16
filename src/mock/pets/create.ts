@@ -16,18 +16,18 @@ export const mockCreatePetBody = (options?: mockCreatePetBodyOptions) => {
     size: 'MEDIUM',
   }
 
-  if (options?.invalidField) {
-    const invalidField = options.invalidField
+  // if (options?.invalidField) {
+  //   const invalidField = options.invalidField
 
-    const formattedBody = {
-      ...body,
-      [invalidField]: faker.lorem.word(),
-    }
+  //   const formattedBody = {
+  //     ...body,
+  //     [invalidField]: faker.lorem.word(),
+  //   }
 
-    console.log({ formattedBody })
+  //   console.log({ formattedBody })
 
-    return formattedBody
-  }
+  //   return formattedBody
+  // }
 
   return body
 }

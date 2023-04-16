@@ -15,11 +15,7 @@ export class InMemoryPetsRepository implements PetsRepository {
   async findById(id: string) {
     const org = this.items.find((item) => item.id === id)
 
-    if (!org) {
-      return null
-    }
-
-    return org
+    return org ?? null
   }
 
   async searchMany(

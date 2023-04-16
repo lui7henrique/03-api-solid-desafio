@@ -51,4 +51,18 @@ describe('Authenticate org use-case', () => {
       InvalidCredentialsError,
     )
   })
+
+  it('should not be able to authenticate with wrong password', async () => {
+    const fakeOrg = await mockOrg()
+    await orgsRepository.create(fakeOrg)
+
+    const fakeData = {
+      email: fakeOrg.email,
+      password: faker.internet.password(),
+    }
+
+    await expect(() => sut.execute(fakeData)).rejects.toBeInstanceOf(
+      InvalidCredentialsError,
+    )
+  })
 })
