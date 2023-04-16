@@ -1,20 +1,35 @@
 import { makeSearchPetsUseCase } from '@/use-cases/factories/make-search-pet-use-case'
+import { Ambient, EnergyLevel, IndependencyLevel, Size } from '@prisma/client'
 import { FastifyReply, FastifyRequest } from 'fastify'
 import { z } from 'zod'
 
 export async function search(request: FastifyRequest, reply: FastifyReply) {
   const searchPetsQuerySchema = z.object({
     city: z.string().nonempty(),
+
+    age: z.coerce.number().min(0).max(30).optional(),
+    size: z.nativeEnum(Size).optional(),
+    energy_level: z.nativeEnum(EnergyLevel).optional(),
+    independency_level: z.nativeEnum(IndependencyLevel).optional(),
+    ambient: z.nativeEnum(Ambient).optional(),
+
     page: z.coerce.number().min(1).default(1),
   })
 
-  const { city, page } = searchPetsQuerySchema.parse(request.query)
+  const { city, page, age, size, energy_level, ambient, independency_level } =
+    searchPetsQuerySchema.parse(request.query)
 
   const searchPetsUseCase = makeSearchPetsUseCase()
 
   const { pets } = await searchPetsUseCase.execute({
     city,
     page,
+
+    age,
+    size,
+    energy_level,
+    ambient,
+    independency_level,
   })
 
   return reply.status(200).send({

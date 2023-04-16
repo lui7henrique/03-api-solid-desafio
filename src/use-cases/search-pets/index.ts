@@ -1,10 +1,22 @@
-import { Pet } from '@prisma/client'
+import {
+  Ambient,
+  EnergyLevel,
+  IndependencyLevel,
+  Pet,
+  Size,
+} from '@prisma/client'
 import { PetsRepository } from '@/repositories/pets-repository'
 import { CityIsRequiredError } from '../errors/city-is-required-errror'
 
 interface SearchUseCaseRequest {
   city: string
   page: number
+
+  age?: number
+  size?: Size
+  energy_level?: EnergyLevel
+  ambient?: Ambient
+  independency_level?: IndependencyLevel
 }
 
 interface SearchUseCaseResponse {
@@ -17,12 +29,27 @@ export class SearchPetsUseCase {
   async execute({
     city,
     page,
+
+    age,
+    size,
+    energy_level,
+    ambient,
+    independency_level,
   }: SearchUseCaseRequest): Promise<SearchUseCaseResponse> {
     if (!city) {
       throw new CityIsRequiredError()
     }
 
-    const pets = await this.petsRepository.searchMany(city, page)
+    const pets = await this.petsRepository.searchMany(
+      city,
+      page,
+
+      age,
+      size,
+      energy_level,
+      ambient,
+      independency_level,
+    )
 
     return { pets }
   }
