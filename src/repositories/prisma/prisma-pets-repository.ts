@@ -10,4 +10,16 @@ export class PrismaPetsRepository implements PetsRepository {
 
     return pet
   }
+
+  async searchMany(city: string, page: number) {
+    const pets = await prisma.pet.findMany({
+      where: {
+        Org: { city: { contains: city } },
+      },
+      skip: (page - 1) * 20,
+      take: 20,
+    })
+
+    return pets
+  }
 }
