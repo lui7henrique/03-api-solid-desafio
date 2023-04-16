@@ -1,8 +1,8 @@
-import { InMemoryOrgsRepository } from '@/repositories/in-memory/in-memory-users-repository'
 import { compare } from 'bcryptjs'
 import { expect, describe, it, beforeEach } from 'vitest'
 import { RegisterOrgUseCase } from '.'
 
+import { InMemoryOrgsRepository } from '@/repositories/in-memory/in-memory-orgs-repository'
 import { OrgAlreadyExistsError } from '../errors/org-already-exists-errors'
 import { mockCreateOrgBody } from '@/mock/orgs/create'
 

@@ -1,9 +1,9 @@
 import { beforeEach, describe, expect, it } from 'vitest'
 import { AuthenticateUseCase } from '.'
-import { InMemoryOrgsRepository } from '@/repositories/in-memory/in-memory-users-repository'
 import { mockOrg } from '@/mock/orgs/create'
 import { InvalidCredentialsError } from '../errors/invalid-credentials-error'
 import { faker } from '@faker-js/faker'
+import { InMemoryOrgsRepository } from '@/repositories/in-memory/in-memory-orgs-repository'
 
 let orgsRepository: InMemoryOrgsRepository
 let sut: AuthenticateUseCase

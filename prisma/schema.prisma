@@ -36,15 +36,15 @@ model Pet {
   name               String
   description        String
   age                Int
-  size               Size              @default(MEDIUM)
-  energy_level       EnergyLevel       @default(MEDIUM)
-  independency_level IndependencyLevel @default(MEDIUM)
-  ambient            Ambient           @default(MEDIUM)
+  size               Size
+  energy_level       EnergyLevel
+  independency_level IndependencyLevel
+  ambient            Ambient
 
   created_at DateTime @default(now())
 
-  Org   Org?    @relation(fields: [orgId], references: [id])
-  orgId String?
+  Org   Org    @relation(fields: [orgId], references: [id])
+  orgId String
 
   @@map("pets")
 }
