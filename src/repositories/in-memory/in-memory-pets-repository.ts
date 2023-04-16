@@ -27,7 +27,7 @@ export class InMemoryPetsRepository implements PetsRepository {
     ambient?: Ambient | undefined,
     independency_level?: IndependencyLevel | undefined,
   ) {
-    const filtered = this.items
+    const filtered = this.items.slice((page - 1) * 20, page * 20)
 
     return filtered
   }
