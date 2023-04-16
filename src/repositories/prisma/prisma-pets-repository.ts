@@ -17,6 +17,14 @@ export class PrismaPetsRepository implements PetsRepository {
     return pet
   }
 
+  async findById(id: string) {
+    const pet = await prisma.pet.findFirst({
+      where: { id },
+    })
+
+    return pet
+  }
+
   async searchMany(
     city: string,
     page: number,

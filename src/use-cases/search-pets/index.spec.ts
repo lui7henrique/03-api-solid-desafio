@@ -24,17 +24,6 @@ describe('Search pets use-case', () => {
 
     orgsRepository.create(newOrg)
 
-    // Array.from({ length: 30 }).map((_) => {
-    //   const data = mockCreatePetBody()
-
-    //   petsRepository.create({
-    //     orgId: org.id,
-    //     ...data,
-    //   })
-
-    //   return data
-    // })
-
     sut = new SearchPetsUseCase(petsRepository)
   })
 

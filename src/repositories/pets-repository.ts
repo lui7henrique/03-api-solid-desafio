@@ -20,4 +20,6 @@ export interface PetsRepository {
     ambient?: Ambient,
     independency_level?: IndependencyLevel,
   ): Promise<Pet[]>
+
+  findById(id: string): Promise<Pet | null>
 }
