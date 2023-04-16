@@ -32,32 +32,68 @@ enum Ambient {
 }
 
 model Pet {
-  id                String            @id @default(uuid())
-  name              String
-  description       String            @unique
-  age               Int
-  size              Size              @default(MEDIUM)
-  energy_level      EnergyLevel       @default(MEDIUM)
-  independecy_level IndependencyLevel @default(MEDIUM)
-  ambient           Ambient           @default(MEDIUM)
+  id                 String            @id @default(uuid())
+  name               String
+  description        String
+  age                Int
+  size               Size              @default(MEDIUM)
+  energy_level       EnergyLevel       @default(MEDIUM)
+  independency_level IndependencyLevel @default(MEDIUM)
+  ambient            Ambient           @default(MEDIUM)
 
   created_at DateTime @default(now())
+
+  Org   Org?    @relation(fields: [orgId], references: [id])
+  orgId String?
 
   @@map("pets")
 }
 
+enum State {
+  AC
+  AL
+  AP
+  AM
+  BA
+  CE
+  DF
+  ES
+  GO
+  MA
+  MT
+  MS
+  MG
+  PA
+  PB
+  PR
+  PE
+  PI
+  RJ
+  RN
+  RS
+  RO
+  RR
+  SC
+  SP
+  SE
+  TO
+}
+
 model Org {
-  id String @id @default(uuid())
-
+  id               String   @id @default(uuid())
   responsible_name String
-  email            String @unique
+  email            String   @unique
   postalCode       String
+  address          String
+  neighborhood     String
+  number           String
+  city             String
+  state            State
+  whatsapp_number  String
+  password_hash    String
+  created_at       DateTime @default(now())
 
-  address         String
-  whatsapp_number String
-  password_hash   String
-
-  created_at DateTime @default(now())
+  pets Pet[]
 
   @@map("orgs")
 }

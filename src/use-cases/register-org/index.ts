@@ -17,6 +17,10 @@ export class RegisterOrgUseCase {
   async execute({
     responsible_name,
     address,
+    neighborhood,
+    city,
+    number,
+    state,
     email,
     password,
     postalCode,
@@ -33,6 +37,10 @@ export class RegisterOrgUseCase {
     const org = await this.orgsRepository.create({
       responsible_name,
       address,
+      neighborhood,
+      city,
+      number,
+      state,
       email,
       postalCode,
       whatsapp_number,

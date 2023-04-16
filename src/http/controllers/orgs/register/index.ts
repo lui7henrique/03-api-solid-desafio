@@ -1,5 +1,6 @@
 import { OrgAlreadyExistsError } from '@/use-cases/errors/org-already-exists-errors'
 import { makeOrgRegisterUseCase } from '@/use-cases/factories/make-org-register-use-case'
+import { State } from '@prisma/client'
 import { FastifyReply, FastifyRequest } from 'fastify'
 import { z } from 'zod'
 
@@ -7,7 +8,13 @@ export type RegisterOrgFields = {
   responsible_name: string
   email: string
   postalCode: string
+
   address: string
+  neighborhood: string
+  number: string
+  city: string
+  state: State
+
   whatsapp_number: string
   password: string
 }
@@ -18,6 +25,11 @@ export async function register(request: FastifyRequest, reply: FastifyReply) {
     email: z.string().nonempty().email(),
     postalCode: z.string().nonempty(),
     address: z.string().nonempty(),
+    neighborhood: z.string().nonempty(),
+    number: z.string().nonempty(),
+    city: z.string().nonempty(),
+    state: z.nativeEnum(State),
+
     whatsapp_number: z.string().nonempty(),
     password: z.string().min(6),
   })
