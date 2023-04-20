@@ -20,3 +20,15 @@
 | O usuário que quer adotar, entrará em contato com a ORG via WhatsApp |  | Feito |
 | Todos os filtros, além da cidade, são opcionais |  | Feito |
 | Para uma ORG acessar a aplicação como admin, ela precisa estar logada |  | Feito |
+
+
+### Setup E2E Test
+```bash
+cd prisma/vitest-environment-prisma
+npm link
+```
+
+```bash
+cd ..
+npm link vitest-environment-prisma
+```
