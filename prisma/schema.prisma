@@ -31,6 +31,11 @@ enum Ambient {
   LARGE
 }
 
+enum Type {
+  DOG
+  CAT
+}
+
 model Pet {
   id                 String            @id @default(uuid())
   name               String
@@ -40,6 +45,7 @@ model Pet {
   energy_level       EnergyLevel
   independency_level IndependencyLevel
   ambient            Ambient
+  type               Type
 
   created_at DateTime @default(now())
 
