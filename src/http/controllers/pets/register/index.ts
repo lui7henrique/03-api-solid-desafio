@@ -1,5 +1,11 @@
 import { makeRegisterPetUseCase } from '@/use-cases/factories/make-register-pet-use-case'
-import { Ambient, EnergyLevel, IndependencyLevel, Size } from '@prisma/client'
+import {
+  Ambient,
+  EnergyLevel,
+  IndependencyLevel,
+  Size,
+  Type,
+} from '@prisma/client'
 import { FastifyReply, FastifyRequest } from 'fastify'
 import { z } from 'zod'
 
@@ -11,6 +17,7 @@ export type RegisterPetFields = {
   energy_level: EnergyLevel
   independency_level: IndependencyLevel
   ambient: Ambient
+  type: Type
 }
 
 export async function register(request: FastifyRequest, reply: FastifyReply) {
@@ -30,6 +37,7 @@ export async function register(request: FastifyRequest, reply: FastifyReply) {
     energy_level: z.nativeEnum(EnergyLevel),
     independency_level: z.nativeEnum(IndependencyLevel),
     ambient: z.nativeEnum(Ambient),
+    type: z.nativeEnum(Type),
   })
 
   const fields = registerPetBodySchema.parse(request.body)
