@@ -5,6 +5,7 @@ import {
   EnergyLevel,
   Ambient,
   IndependencyLevel,
+  Type,
 } from '@prisma/client'
 
 export interface PetsRepository {
@@ -19,6 +20,7 @@ export interface PetsRepository {
     energy_level?: EnergyLevel,
     ambient?: Ambient,
     independency_level?: IndependencyLevel,
+    type?: Type,
   ): Promise<Pet[]>
 
   findById(id: string): Promise<Pet | null>

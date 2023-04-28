@@ -5,6 +5,7 @@ import {
   IndependencyLevel,
   Prisma,
   Size,
+  Type,
 } from '@prisma/client'
 import { PetsRepository } from '../pets-repository'
 
@@ -34,6 +35,7 @@ export class PrismaPetsRepository implements PetsRepository {
     energy_level?: EnergyLevel,
     ambient?: Ambient,
     independency_level?: IndependencyLevel,
+    type?: Type,
   ) {
     const pets = await prisma.pet.findMany({
       where: {
@@ -44,6 +46,7 @@ export class PrismaPetsRepository implements PetsRepository {
         energy_level: { equals: energy_level },
         ambient: { equals: ambient },
         independency_level: { equals: independency_level },
+        type: { equals: type },
       },
       skip: (page - 1) * 20,
       take: 20,

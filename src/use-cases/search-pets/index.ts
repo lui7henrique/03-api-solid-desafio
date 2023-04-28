@@ -4,6 +4,7 @@ import {
   IndependencyLevel,
   Pet,
   Size,
+  Type,
 } from '@prisma/client'
 import { PetsRepository } from '@/repositories/pets-repository'
 import { CityIsRequiredError } from '../errors/city-is-required-errror'
@@ -17,6 +18,7 @@ interface SearchUseCaseRequest {
   energy_level?: EnergyLevel
   ambient?: Ambient
   independency_level?: IndependencyLevel
+  type?: Type
 }
 
 interface SearchUseCaseResponse {
@@ -35,6 +37,7 @@ export class SearchPetsUseCase {
     energy_level,
     ambient,
     independency_level,
+    type,
   }: SearchUseCaseRequest): Promise<SearchUseCaseResponse> {
     if (!city) {
       throw new CityIsRequiredError()
@@ -49,6 +52,7 @@ export class SearchPetsUseCase {
       energy_level,
       ambient,
       independency_level,
+      type,
     )
 
     return { pets }
