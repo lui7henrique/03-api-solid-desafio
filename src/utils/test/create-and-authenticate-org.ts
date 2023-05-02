@@ -18,7 +18,7 @@ export async function createAndAuthenticateOrg(app: FastifyInstance) {
       neighborhood: faker.address.street(),
       number: faker.address.buildingNumber(),
       state: 'AC',
-      postalCode: faker.address.zipCodeByState('#####-###'),
+      postal_code: faker.address.zipCodeByState('#####-###'),
       responsible_name: faker.name.fullName(),
       whatsapp_number: faker.phone.number(),
       city,

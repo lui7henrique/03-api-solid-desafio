@@ -16,7 +16,7 @@ export const mockCreateOrgBody = () => {
 
     email: faker.internet.email(),
     password: faker.internet.password(),
-    postalCode: faker.address.zipCode('#####-###'),
+    postal_code: faker.address.zipCode('#####-###'),
     whatsapp_number: faker.phone.number('+55 ## 9####-#####'),
   }
 
@@ -42,7 +42,7 @@ export const mockOrg = async () => {
     password_hash: await hash(password, 6),
     id: randomUUID(),
     password,
-    postalCode: faker.address.zipCode('#####-###'),
+    postal_code: faker.address.zipCode('#####-###'),
     whatsapp_number: faker.phone.number('+55 ## 9####-#####'),
   }
 

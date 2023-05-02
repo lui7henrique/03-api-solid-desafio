@@ -23,7 +23,7 @@ export class RegisterOrgUseCase {
     state,
     email,
     password,
-    postalCode,
+    postal_code,
     whatsapp_number,
   }: RegisterUseCaseRequest): Promise<RegisterUseCaseResponse> {
     const passwordHash = await hash(password, 6)
@@ -42,7 +42,7 @@ export class RegisterOrgUseCase {
       number,
       state,
       email,
-      postalCode,
+      postal_code,
       whatsapp_number,
       password_hash: passwordHash,
     })
