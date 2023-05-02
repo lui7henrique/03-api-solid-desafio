@@ -89,7 +89,7 @@ model Org {
   id               String   @id @default(uuid())
   responsible_name String
   email            String   @unique
-  postalCode       String
+  postal_code      String
   address          String
   neighborhood     String
   number           String
