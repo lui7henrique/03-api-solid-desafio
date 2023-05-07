@@ -5,6 +5,7 @@ import { FastifyReply, FastifyRequest } from 'fastify'
 import { z } from 'zod'
 
 export type RegisterOrgFields = {
+  name: string
   responsible_name: string
   email: string
   postal_code: string
@@ -21,6 +22,7 @@ export type RegisterOrgFields = {
 
 export async function register(request: FastifyRequest, reply: FastifyReply) {
   const registerBodySchema = z.object({
+    name: z.string().nonempty(),
     responsible_name: z.string().nonempty(),
     email: z.string().nonempty().email(),
     postal_code: z.string().nonempty(),

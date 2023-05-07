@@ -15,6 +15,7 @@ export class RegisterOrgUseCase {
   constructor(private orgsRepository: OrgsRepository) {}
 
   async execute({
+    name,
     responsible_name,
     address,
     neighborhood,
@@ -35,6 +36,7 @@ export class RegisterOrgUseCase {
     }
 
     const org = await this.orgsRepository.create({
+      name,
       responsible_name,
       address,
       neighborhood,

@@ -87,6 +87,7 @@ enum State {
 
 model Org {
   id               String   @id @default(uuid())
+  name             String
   responsible_name String
   email            String   @unique
   postal_code      String

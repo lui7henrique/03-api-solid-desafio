@@ -25,6 +25,7 @@ describe('Register org (e2e)', () => {
         state: 'AC',
         postal_code: faker.address.zipCodeByState('#####-###'),
         responsible_name: faker.name.fullName(),
+        name: faker.company.name(),
         password_hash: await hash(password, 6),
         whatsapp_number: faker.phone.number(),
         city: faker.address.city(),
@@ -40,7 +41,7 @@ describe('Register org (e2e)', () => {
     expect(statusCode).toEqual(200)
   })
 
-  it('should be able to register already exists org', async () => {
+  it('should not be able to register already exists org', async () => {
     const org = {
       address: faker.address.street(),
       neighborhood: faker.address.street(),
@@ -48,6 +49,7 @@ describe('Register org (e2e)', () => {
       state: 'AC',
       postal_code: faker.address.zipCodeByState('#####-###'),
       responsible_name: faker.name.fullName(),
+      name: faker.company.name(),
       password: faker.internet.password(),
       whatsapp_number: faker.phone.number(),
       city: faker.address.city(),

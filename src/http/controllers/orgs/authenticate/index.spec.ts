@@ -25,6 +25,7 @@ describe('Authenticate org (e2e)', () => {
         state: 'AC',
         postal_code: faker.address.zipCodeByState('#####-###'),
         responsible_name: faker.name.fullName(),
+        name: faker.company.name(),
         password_hash: await hash(password, 6),
         whatsapp_number: faker.phone.number(),
         city: faker.address.city(),

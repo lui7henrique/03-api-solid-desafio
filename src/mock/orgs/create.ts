@@ -7,6 +7,7 @@ import { randomUUID } from 'crypto'
 export const mockCreateOrgBody = () => {
   const body: RegisterOrgFields = {
     responsible_name: faker.name.fullName(),
+    name: faker.company.name(),
 
     address: faker.address.street(),
     neighborhood: faker.company.name(),
@@ -31,6 +32,7 @@ export const mockOrg = async () => {
     password: string
   } & Prisma.OrgUncheckedCreateInput = {
     responsible_name: faker.name.fullName(),
+    name: faker.company.name(),
 
     address: faker.address.street(),
     neighborhood: faker.company.name(),
