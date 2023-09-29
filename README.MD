@@ -2,10 +2,6 @@
 
 This is the documentation for the Find a Friend Back-End, a crucial part of the practical challenge aimed at reinforcing concepts of `API development`, `SOLID principles`, and `testing`. The project consists of an API designed to facilitate the adoption of animals by connecting individuals interested in adopting pets with organizations that offer animals for adoption.
 
-## 📄 Description 
-
-The Find a Friend Back-End is the server-side component of this application, providing the necessary resources for the operation of the animal adoption platform.
-
 ## 🚀 How to Run 
 
 To run the Find a Friend Back-End, follow these steps:
@@ -55,8 +51,6 @@ The Find a Friend Back-End should now be running and accessible at the specified
 
 ## 🛠️ How to Build 
 
-To build the project, follow these steps:
-
 1. **Compile TypeScript to JavaScript:**
 
    ```bash
@@ -90,8 +84,6 @@ To run tests, follow these steps:
    ```bash
    pnpm run test:coverage
    ```
-
-The tests will ensure the functionality and reliability of the Find a Friend Back-End.
 
 ## 📦 Dependencies 
 
