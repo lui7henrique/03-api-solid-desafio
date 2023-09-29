@@ -74,37 +74,19 @@ To build the project, follow these steps:
 
 To run tests, follow these steps:
 
-1. **Install Dependencies:**
-
-   ```bash
-   pnpm install
-   ```
-
-2. **Generate Prisma Client:**
-
-   ```bash
-   npx prisma generate
-   ```
-
-3. **Run Prisma Migrations:**
-
-   ```bash
-   npx prisma migrate dev
-   ```
-
-4. **Execute Unit Tests:**
+1. **Execute Unit Tests:**
 
    ```bash
    pnpm run test
    ```
 
-5. **Execute Integration Tests:**
+2. **Execute Integration Tests:**
 
    ```bash
    pnpm run test:e2e
    ```
 
-6. **Generate Test Coverage Report:**
+3. **Generate Test Coverage Report:**
 
    ```bash
    pnpm run test:coverage
@@ -122,3 +104,4 @@ The tests will ensure the functionality and reliability of the Find a Friend Bac
 - `tsup`: TypeScript compiler.
 - `vitest`: Testing framework.
 - `zod`: Data validation library.
+
