@@ -1,4 +1,4 @@
-```markdown
+
 # Find a Friend Back-End
 
 This is the documentation for the Find a Friend Back-End, a crucial part of the practical challenge aimed at reinforcing concepts of API development, SOLID principles, and testing. The project consists of an API designed to facilitate the adoption of animals by connecting individuals interested in adopting pets with organizations that offer animals for adoption.
@@ -122,6 +122,3 @@ The tests will ensure the functionality and reliability of the Find a Friend Bac
 - `tsup`: TypeScript compiler.
 - `vitest`: Testing framework.
 - `zod`: Data validation library.
-
-Developed with 💜 by Rocketseat 👋
-```
