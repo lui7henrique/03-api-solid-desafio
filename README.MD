@@ -1,26 +1,26 @@
 # 🐾 Find a Friend (Back-End)
 
-This is the documentation for the Find a Friend Back-End, a crucial part of the practical challenge aimed at reinforcing concepts of `API development`, `SOLID principles`, and `testing`. The project consists of an API designed to facilitate the adoption of animals by connecting individuals interested in adopting pets with organizations that offer animals for adoption.
+This is the documentation for the Find a Friend (back-end), a crucial part of the practical challenge aimed at reinforcing concepts of `API development`, `SOLID principles`, and `testing`. The project consists of an API designed to facilitate the adoption of animals by connecting individuals interested in adopting pets with organizations that offer animals for adoption.
 
 ## 💡 About
 
 ### Application Rules
 
-- It must be possible to register a pet.
-- It must be possible to list all pets available for adoption in a city.
-- It must be possible to filter pets by their characteristics.
-- It must be possible to view details of a pet available for adoption.
-- It must be possible to register as an organization (ORG).
-- It must be possible to log in as an organization (ORG).
+- [x] It must be possible to register a pet.
+- [x] It must be possible to list all pets available for adoption in a city.
+- [x] It must be possible to filter pets by their characteristics.
+- [x] It must be possible to view details of a pet available for adoption.
+- [x] It must be possible to register as an organization (ORG).
+- [x] It must be possible to log in as an organization (ORG).
 
 ### Business Rules
 
-- To list pets, it is mandatory to provide the city.
-- An ORG needs to have an address and a WhatsApp number.
-- A pet must be associated with an ORG.
-- Users who want to adopt a pet will contact the ORG via WhatsApp.
-- All filters, other than the city, are optional.
-- For an ORG to access the application as an admin, they must be logged in.
+- [x] To list pets, it is mandatory to provide the city.
+- [x] An ORG needs to have an address and a WhatsApp number.
+- [x] A pet must be associated with an ORG.
+- [x] Users who want to adopt a pet will contact the ORG via WhatsApp.
+- [x] All filters, other than the city, are optional.
+- [x] For an ORG to access the application as an admin, they must be logged in.
 
 ## 🚀 How to Run
 
