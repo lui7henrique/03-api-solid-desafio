@@ -1,7 +1,7 @@
 
-# Find a Friend Back-End
+# Find a Friend (Back-End)
 
-This is the documentation for the Find a Friend Back-End, a crucial part of the practical challenge aimed at reinforcing concepts of API development, SOLID principles, and testing. The project consists of an API designed to facilitate the adoption of animals by connecting individuals interested in adopting pets with organizations that offer animals for adoption.
+This is the documentation for the Find a Friend Back-End, a crucial part of the practical challenge aimed at reinforcing concepts of `API development`, `SOLID principles`, and `testing`. The project consists of an API designed to facilitate the adoption of animals by connecting individuals interested in adopting pets with organizations that offer animals for adoption.
 
 ## Description
 
