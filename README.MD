@@ -1,13 +1,12 @@
-
-# Find a Friend (Back-End)
+# 🐾 Find a Friend (Back-End) 
 
 This is the documentation for the Find a Friend Back-End, a crucial part of the practical challenge aimed at reinforcing concepts of `API development`, `SOLID principles`, and `testing`. The project consists of an API designed to facilitate the adoption of animals by connecting individuals interested in adopting pets with organizations that offer animals for adoption.
 
-## Description
+## 📄 Description 
 
 The Find a Friend Back-End is the server-side component of this application, providing the necessary resources for the operation of the animal adoption platform.
 
-## How to Run
+## 🚀 How to Run 
 
 To run the Find a Friend Back-End, follow these steps:
 
@@ -54,7 +53,7 @@ To run the Find a Friend Back-End, follow these steps:
 
 The Find a Friend Back-End should now be running and accessible at the specified port. You can interact with the API according to your requirements.
 
-## How to Build
+## 🛠️ How to Build 
 
 To build the project, follow these steps:
 
@@ -70,7 +69,7 @@ To build the project, follow these steps:
    pnpm start
    ```
 
-## How to Test
+## 🧪 How to Test 
 
 To run tests, follow these steps:
 
@@ -94,7 +93,7 @@ To run tests, follow these steps:
 
 The tests will ensure the functionality and reliability of the Find a Friend Back-End.
 
-## Dependencies
+## 📦 Dependencies 
 
 - `@fastify/cors`, `fastify`: Framework for Node.js API development.
 - `@prisma/client`: Prisma client for interacting with the database.
@@ -103,5 +102,4 @@ The tests will ensure the functionality and reliability of the Find a Friend Bac
 - `supertest`: Library for integration testing.
 - `tsup`: TypeScript compiler.
 - `vitest`: Testing framework.
-- `zod`: Data validation library.
-
+- `zod`: Data validation library. 🐶
