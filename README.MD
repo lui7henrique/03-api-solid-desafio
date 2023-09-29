@@ -1,3 +1,4 @@
+```markdown
 # Find a Friend Back-End
 
 This is the documentation for the Find a Friend Back-End, a crucial part of the practical challenge aimed at reinforcing concepts of API development, SOLID principles, and testing. The project consists of an API designed to facilitate the adoption of animals by connecting individuals interested in adopting pets with organizations that offer animals for adoption.
@@ -6,22 +7,110 @@ This is the documentation for the Find a Friend Back-End, a crucial part of the 
 
 The Find a Friend Back-End is the server-side component of this application, providing the necessary resources for the operation of the animal adoption platform.
 
-## Scripts
+## How to Run
 
-### Development Execution
+To run the Find a Friend Back-End, follow these steps:
 
-- `npm run start:dev`: Initiates the server in development mode, monitoring changes in `src/server.ts`.
+1. **Start Docker Compose:**
 
-### Build
+   ```bash
+   docker-compose up
+   ```
 
-- `npm run build`: Compiles TypeScript code into JavaScript, generating files in the `build` folder.
-- `npm start`: Launches the server using the compiled files.
+2. **Set Environment Variables:**
 
-### Testing
+   Create a `.env` file or configure environment variables with the following values:
 
-- `npm run test`: Executes unit tests located in the `src/use-cases` folder.
-- `npm run test:e2e`: Executes integration tests located in the `src/http` folder.
-- `npm run test:coverage`: Runs tests and generates a coverage report.
+   ```
+   NODE_ENV=dev
+   PORT=3333
+   DATABASE_URL=postgresql://docker:docker@localhost:5432/find-a-friend-db?schema=public
+   JWT_SECRET=henrique
+   ```
+
+3. **Install Dependencies:**
+
+   ```bash
+   pnpm install
+   ```
+
+4. **Generate Prisma Client:**
+
+   ```bash
+   npx prisma generate
+   ```
+
+5. **Run Prisma Migrations:**
+
+   ```bash
+   npx prisma migrate dev
+   ```
+
+6. **Start the Server in Development Mode:**
+
+   ```bash
+   pnpm run start:dev
+   ```
+
+The Find a Friend Back-End should now be running and accessible at the specified port. You can interact with the API according to your requirements.
+
+## How to Build
+
+To build the project, follow these steps:
+
+1. **Compile TypeScript to JavaScript:**
+
+   ```bash
+   pnpm run build
+   ```
+
+2. **Start the Compiled Server:**
+
+   ```bash
+   pnpm start
+   ```
+
+## How to Test
+
+To run tests, follow these steps:
+
+1. **Install Dependencies:**
+
+   ```bash
+   pnpm install
+   ```
+
+2. **Generate Prisma Client:**
+
+   ```bash
+   npx prisma generate
+   ```
+
+3. **Run Prisma Migrations:**
+
+   ```bash
+   npx prisma migrate dev
+   ```
+
+4. **Execute Unit Tests:**
+
+   ```bash
+   pnpm run test
+   ```
+
+5. **Execute Integration Tests:**
+
+   ```bash
+   pnpm run test:e2e
+   ```
+
+6. **Generate Test Coverage Report:**
+
+   ```bash
+   pnpm run test:coverage
+   ```
+
+The tests will ensure the functionality and reliability of the Find a Friend Back-End.
 
 ## Dependencies
 
@@ -33,3 +122,6 @@ The Find a Friend Back-End is the server-side component of this application, pro
 - `tsup`: TypeScript compiler.
 - `vitest`: Testing framework.
 - `zod`: Data validation library.
+
+Developed with 💜 by Rocketseat 👋
+```
