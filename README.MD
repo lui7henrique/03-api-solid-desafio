@@ -117,3 +117,9 @@ The tests will ensure the functionality and reliability of the Find a Friend Bac
 - `tsup`: TypeScript compiler.
 - `vitest`: Testing framework.
 - `zod`: Data validation library. 🐶
+
+##  👨‍💻 **Author**
+
+Luiz Henrique - Software Developer
+
+[Linkedin](https://www.linkedin.com/in/luiz-henrique7/) | [E-mail](mailto:7henrique18@gmail.com)
