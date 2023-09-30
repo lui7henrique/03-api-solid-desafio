@@ -1,5 +1,3 @@
-Certainly, here's the README with an additional section in English for deployment recommendations using the Render platform for hosting the application and Neon for the database:
-
 # 🐾 Find a Friend (Back-End)
 
 This is the documentation for the Find a Friend (back-end), a crucial part of the practical challenge aimed at reinforcing concepts of `API development`, `SOLID principles`, and `testing`. The project consists of an API designed to facilitate the adoption of animals by connecting individuals interested in adopting pets with organizations that offer animals for adoption.
