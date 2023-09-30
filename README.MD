@@ -118,11 +118,13 @@ The tests will ensure the functionality and reliability of the Find a Friend Bac
 - `vitest`: Testing framework.
 - `zod`: Data validation library. 🐶
 
+> If you're interested in deploying the application, you can learn how to do it [here](https://github.com/lui7henrique/find-a-friend-back-end/blob/main/DEPLOY.MD). It's quick and easy! 🚀
+
 ##  👨‍💻 **Author**
 
 Luiz Henrique - Software Developer
 
 [Linkedin](https://www.linkedin.com/in/luiz-henrique7/) | [E-mail](mailto:7henrique18@gmail.com)
 
-> If you're interested in deploying the application, you can learn how to do it [here](https://github.com/lui7henrique/find-a-friend-back-end/blob/main/DEPLOY.MD). It's quick and easy! 🚀
+
 
