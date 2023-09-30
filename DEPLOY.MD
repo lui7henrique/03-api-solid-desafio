@@ -1,6 +1,6 @@
 # 🚀 Deployment
 
-For deploying your Find a Friend Back-End and managing your database, we recommend the following services:
+For deploying your project and managing your database, we recommend the following services:
 
 ### 🌐 Hosting Platform: Render
 
