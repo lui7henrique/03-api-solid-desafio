@@ -120,13 +120,6 @@ The tests will ensure the functionality and reliability of the Find a Friend Bac
 - `vitest`: Testing framework.
 - `zod`: Data validation library. 🐶
 
-##  👨‍💻 **Author**
-
-Luiz Henrique - Software Developer
-
-[Linkedin](https://www.linkedin.com/in/luiz-henrique7/) | [E-mail](mailto:7henrique18@gmail.com)
-
----
 
 # 🚀 Deployment
 
@@ -161,3 +154,10 @@ For deploying your Find a Friend Back-End and managing your database, we recomme
 Now, your Back-End application is deployed on Render, and it's connected to the Neon database. Be sure to fine-tune your production settings as needed and monitor your application's performance on your chosen hosting platform. Good luck! 🚀
 
 This should provide developers with clear instructions on how to deploy the application using Render and Neon for the database.
+
+##  👨‍💻 **Author**
+
+Luiz Henrique - Software Developer
+
+[Linkedin](https://www.linkedin.com/in/luiz-henrique7/) | [E-mail](mailto:7henrique18@gmail.com)
+
