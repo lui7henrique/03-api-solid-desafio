@@ -24,7 +24,7 @@ This is the documentation for the Find a Friend (back-end), a crucial part of th
 
 ## 🚀 How to Run
 
-To run the Find a Friend Back-End, follow these steps:
+To run the application, follow these steps:
 
 1. **Start Docker Compose:**
 
@@ -67,7 +67,7 @@ To run the Find a Friend Back-End, follow these steps:
    pnpm run start:dev
    ```
 
-The Find a Friend Back-End should now be running and accessible at the specified port. You can interact with the API according to your requirements.
+The application should now be running and accessible at the specified port. You can interact with the API according to your requirements.
 
 ## 🛠️ How to Build
 
@@ -105,7 +105,7 @@ To run tests, follow these steps:
    pnpm run test:coverage
    ```
 
-The tests will ensure the functionality and reliability of the Find a Friend Back-End.
+The tests will ensure the functionality and reliability of the project.
 
 ## 📦 Dependencies
 
