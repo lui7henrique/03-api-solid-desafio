@@ -1,34 +1,128 @@
-### Regras da aplicação
+Certainly, here's the README with an additional section in English for deployment recommendations using the Render platform for hosting the application and Neon for the database:
 
-| Regras                                                                       | Descrição                                                                                                                                                                                                                     | Status |
-| ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| Deve ser possível cadastrar um pet                                           | Contendo: Nome, Descrição (máximo de 300 caracteres, Idade, Porte (pequeno, médio, grande), Nível de energia (baixa, média, alta), nível de independência , Ambiente (reduzido, médio, amplo), Fotos, Requisitos para adoção) | Feito  |
-| Deve ser possível listar todos os pets disponíveis para adoção em uma cidade |                                                                                                                                                                                                                               | Feito  |
-| Deve ser possível filtrar pets por suas características                      |                                                                                                                                                                                                                               | Feito  |
-| Deve ser possível visualizar detalhes de um pet para adoção                  |                                                                                                                                                                                                                               | Feito  |
-| Deve ser possível se cadastrar como uma ORG                                  | Contendo os seguintes campos: Nome do responsável, e-mail, CEP, Endereço, Número de whatsapp, Senha                                                                                                                           | Feito  |
-| Deve ser possível realizar login como uma ORG                                |                                                                                                                                                                                                                               | Feito  |
+# 🐾 Find a Friend (Back-End)
 
-### Regras de negócio
+This is the documentation for the Find a Friend (back-end), a crucial part of the practical challenge aimed at reinforcing concepts of `API development`, `SOLID principles`, and `testing`. The project consists of an API designed to facilitate the adoption of animals by connecting individuals interested in adopting pets with organizations that offer animals for adoption.
 
-| Regras                                                                | Descrição | Status |
-| --------------------------------------------------------------------- | --------- | ------ |
-| Para listar os pets, obrigatoriamente precisamos informar a cidade    |           | Feito  |
-| Uma ORG precisa ter um endereço e um número de WhatsApp               |           | Feito  |
-| Um pet deve estar ligado a uma ORG                                    |           | Feito  |
-| O usuário que quer adotar, entrará em contato com a ORG via WhatsApp  |           | Feito  |
-| Todos os filtros, além da cidade, são opcionais                       |           | Feito  |
-| Para uma ORG acessar a aplicação como admin, ela precisa estar logada |           | Feito  |
+## 💡 About
 
-### Setup E2E Test
+### Application Rules
 
-```bash
-cd prisma/vitest-environment-prisma
-npm link
-```
+- [x] It must be possible to register a pet.
+- [x] It must be possible to list all pets available for adoption in a city.
+- [x] It must be possible to filter pets by their characteristics.
+- [x] It must be possible to view details of a pet available for adoption.
+- [x] It must be possible to register as an organization (ORG).
+- [x] It must be possible to log in as an organization (ORG).
 
-```bash
-cd ..
-cd ..
-npm link vitest-environment-prisma
-```
+### Business Rules
+
+- [x] To list pets, it is mandatory to provide the city.
+- [x] An ORG needs to have an address and a WhatsApp number.
+- [x] A pet must be associated with an ORG.
+- [x] Users who want to adopt a pet will contact the ORG via WhatsApp.
+- [x] All filters, other than the city, are optional.
+- [x] For an ORG to access the application as an admin, they must be logged in.
+
+## 🚀 How to Run
+
+To run the Find a Friend Back-End, follow these steps:
+
+1. **Start Docker Compose:**
+
+   ```bash
+   docker-compose up
+   ```
+
+2. **Set Environment Variables:**
+
+   Create a `.env` file or configure environment variables with the following values:
+
+   ```
+   NODE_ENV=dev
+   PORT=3333
+   DATABASE_URL=postgresql://docker:docker@localhost:5432/find-a-friend-db?schema=public
+   JWT_SECRET=henrique
+   ```
+
+3. **Install Dependencies:**
+
+   ```bash
+   pnpm install
+   ```
+
+4. **Generate Prisma Client:**
+
+   ```bash
+   npx prisma generate
+   ```
+
+5. **Run Prisma Migrations:**
+
+   ```bash
+   npx prisma migrate dev
+   ```
+
+6. **Start the Server in Development Mode:**
+
+   ```bash
+   pnpm run start:dev
+   ```
+
+The Find a Friend Back-End should now be running and accessible at the specified port. You can interact with the API according to your requirements.
+
+## 🛠️ How to Build
+
+1. **Compile TypeScript to JavaScript:**
+
+   ```bash
+   pnpm run build
+   ```
+
+2. **Start the Compiled Server:**
+
+   ```bash
+   pnpm start
+   ```
+
+## 🧪 How to Test
+
+To run tests, follow these steps:
+
+1. **Execute Unit Tests:**
+
+   ```bash
+   pnpm run test
+   ```
+
+2. **Execute Integration Tests:**
+
+   ```bash
+   pnpm run test:e2e
+   ```
+
+3. **Generate Test Coverage Report:**
+
+   ```bash
+   pnpm run test:coverage
+   ```
+
+The tests will ensure the functionality and reliability of the Find a Friend Back-End.
+
+## 📦 Dependencies
+
+- `@fastify/cors`, `fastify`: Framework for Node.js API development.
+- `@prisma/client`: Prisma client for interacting with the database.
+- `bcryptjs`: Library for password hashing.
+- `dotenv`: Environment variable loading.
+- `supertest`: Library for integration testing.
+- `tsup`: TypeScript compiler.
+- `vitest`: Testing framework.
+- `zod`: Data validation library. 🐶
+
+##  👨‍💻 **Author**
+
+Luiz Henrique - Software Developer
+
+[Linkedin](https://www.linkedin.com/in/luiz-henrique7/) | [E-mail](mailto:7henrique18@gmail.com)
+
