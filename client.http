@@ -1,0 +1,71 @@
+@baseUrl = http://localhost:3333
+@token = {{authenticate_org.response.body.token}}
+
+# @name create_org
+POST {{baseUrl}}/orgs
+Content-Type: application/json
+
+{
+  "name": "Animal Rescue Org",
+  "responsible_name": "Maria Silva",
+  "email": "maria.silva@animalrescue.org",
+  "postal_code": "98765-432",
+  "address": "456 Rescue Road",
+  "neighborhood": "Animal Care Neighborhood",
+  "number": "200",
+  "city": "Curitiba",
+  "state": "PR",
+  "whatsapp_number": "+5541988888888",
+  "password": "AdoptionPass123"
+}
+
+### 
+
+# @name authenticate_org
+POST {{baseUrl}}/login
+Content-Type: application/json
+
+{
+  "email": "maria.silva@animalrescue.org",
+  "password": "AdoptionPass123"
+}
+
+### 
+
+# @name get_profile_org
+GET {{baseUrl}}/profile
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+###
+
+# @name register_pet
+POST {{baseUrl}}/pets
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": "Lucky",
+  "description": "A friendly dog looking for a loving home.",
+  "age": 3,
+  "size": "MEDIUM",
+  "energy_level": "HIGH",
+  "independency_level": "LOW",
+  "ambient": "MEDIUM",
+  "type": "DOG"
+}
+
+### 
+
+# @name search_pets
+GET {{baseUrl}}/pets?city=Curitiba&page=1
+Content-Type: application/json
+
+### 
+
+# @name show_pet
+GET {{baseUrl}}/pets/{{search_pets.response.body.pets[0].id}}
+Content-Type: application/json
+
+### 
+
