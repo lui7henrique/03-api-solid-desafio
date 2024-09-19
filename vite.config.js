@@ -3,6 +3,9 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineConfig({
   plugins: [tsconfigPaths()],
+  server: {
+    port: 3007
+  },
   test: {
     environmentMatchGlobs: [['src/http/controllers/**', 'prisma']],
   },
